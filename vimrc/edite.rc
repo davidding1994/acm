@@ -1,0 +1,47 @@
+" -----------------------------------------------------------------------------
+"  < 编写文件时的配置 >
+" -----------------------------------------------------------------------------
+filetype on                                           "启用文件类型侦测
+filetype plugin on                                    "针对不同的文件类型加载对应的插件
+filetype plugin indent on                             "启用缩进
+set smartindent                                       "启用智能对齐方式
+set expandtab                                         "将Tab键转换为空格
+set tabstop=4                                         "设置Tab键的宽度，可以更改，如：宽度为2
+set shiftwidth=4                                      "换行时自动缩进宽度，可更改（宽度同tabstop）
+set smarttab                                          "指定按一次backspace就删除shiftwidth宽度
+set foldenable                                        "启用折叠
+set foldmethod=indent                                 "indent 折叠方式
+" set foldmethod=marker                                "marker 折叠方式
+set backspace=indent,eol,start " set backspace 
+ 
+" 常规模式下用空格键来开关光标行所在折叠（注：zR 展开所有折叠，zM 关闭所有折叠）
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+ 
+" 当文件在外部被修改，自动更新该文件
+set autoread
+ 
+" 常规模式下输入 cS 清除行尾空格
+nmap cS :%s/\s\+$//g<CR>:noh<CR>
+ 
+" 常规模式下输入 cM 清除行尾 ^M 符号
+nmap cM :%s/\r$//g<CR>:noh<CR>
+ 
+set ignorecase                                        "搜索模式里忽略大小写
+set smartcase                                         "如果搜索模式包含大写字符，不使用 'ignorecase' 选项，只有在输入搜索模式并且打开 'ignorecase' 选项时才会使用
+" set noincsearch                                       "在输入要搜索的文字时，取消实时匹配
+ 
+" Ctrl + K 插入模式下光标向上移动
+imap <c-k> <Up>
+ 
+" Ctrl + J 插入模式下光标向下移动
+imap <c-j> <Down>
+ 
+" Ctrl + H 插入模式下光标向左移动 ps : this can make windows console backspace setting fail
+"imap <c-h> <Left>
+ 
+" Ctrl + L 插入模式下光标向右移动
+imap <c-l> <Right>
+ 
+" 启用每行超过80列的字符提示（字体变蓝并加下划线），不启用就注释掉
+"au BufWinEnter * let w:m2=matchadd('Underlined', '\%>' . 80 . 'v.\+', -1)
+
