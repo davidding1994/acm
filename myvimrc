@@ -2,5 +2,5 @@ source C:\Code\acm\vimrc\os_teminal_judge.rc
 "source C:\Code\acm\vimrc\encoding.rc
 source C:\Code\acm\vimrc\edite.rc
 "source C:\Code\acm\vimrc\ui.rc
-set backspace=indent,eol,start " set backspace Îª¿ÉÉ¾³ıµ½Ç°Ò»ĞĞ
+set backspace=indent,eol,start " set backspace ä¸ºå¯åˆ é™¤åˆ°å‰ä¸€è¡Œ
 
