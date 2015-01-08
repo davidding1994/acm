@@ -1,47 +1,47 @@
 " -----------------------------------------------------------------------------
-"  < ±àĞ´ÎÄ¼şÊ±µÄÅäÖÃ >
+"  < ç¼–å†™æ–‡ä»¶æ—¶çš„é…ç½® >
 " -----------------------------------------------------------------------------
-filetype on                                           "ÆôÓÃÎÄ¼şÀàĞÍÕì²â
-filetype plugin on                                    "Õë¶Ô²»Í¬µÄÎÄ¼şÀàĞÍ¼ÓÔØ¶ÔÓ¦µÄ²å¼ş
-filetype plugin indent on                             "ÆôÓÃËõ½ø
-set smartindent                                       "ÆôÓÃÖÇÄÜ¶ÔÆë·½Ê½
-set expandtab                                         "½«Tab¼ü×ª»»Îª¿Õ¸ñ
-set tabstop=4                                         "ÉèÖÃTab¼üµÄ¿í¶È£¬¿ÉÒÔ¸ü¸Ä£¬Èç£º¿í¶ÈÎª2
-set shiftwidth=4                                      "»»ĞĞÊ±×Ô¶¯Ëõ½ø¿í¶È£¬¿É¸ü¸Ä£¨¿í¶ÈÍ¬tabstop£©
-set smarttab                                          "Ö¸¶¨°´Ò»´Îbackspace¾ÍÉ¾³ıshiftwidth¿í¶È
-set foldenable                                        "ÆôÓÃÕÛµş
-set foldmethod=indent                                 "indent ÕÛµş·½Ê½
-" set foldmethod=marker                                "marker ÕÛµş·½Ê½
+filetype on                                           "å¯ç”¨æ–‡ä»¶ç±»å‹ä¾¦æµ‹
+filetype plugin on                                    "é’ˆå¯¹ä¸åŒçš„æ–‡ä»¶ç±»å‹åŠ è½½å¯¹åº”çš„æ’ä»¶
+filetype plugin indent on                             "å¯ç”¨ç¼©è¿›
+set smartindent                                       "å¯ç”¨æ™ºèƒ½å¯¹é½æ–¹å¼
+set expandtab                                         "å°†Tabé”®è½¬æ¢ä¸ºç©ºæ ¼
+set tabstop=4                                         "è®¾ç½®Tabé”®çš„å®½åº¦ï¼Œå¯ä»¥æ›´æ”¹ï¼Œå¦‚ï¼šå®½åº¦ä¸º2
+set shiftwidth=4                                      "æ¢è¡Œæ—¶è‡ªåŠ¨ç¼©è¿›å®½åº¦ï¼Œå¯æ›´æ”¹ï¼ˆå®½åº¦åŒtabstopï¼‰
+set smarttab                                          "æŒ‡å®šæŒ‰ä¸€æ¬¡backspaceå°±åˆ é™¤shiftwidthå®½åº¦
+set foldenable                                        "å¯ç”¨æŠ˜å 
+set foldmethod=indent                                 "indent æŠ˜å æ–¹å¼
+" set foldmethod=marker                                "marker æŠ˜å æ–¹å¼
 set backspace=indent,eol,start " set backspace 
  
-" ³£¹æÄ£Ê½ÏÂÓÃ¿Õ¸ñ¼üÀ´¿ª¹Ø¹â±êĞĞËùÔÚÕÛµş£¨×¢£ºzR Õ¹¿ªËùÓĞÕÛµş£¬zM ¹Ø±ÕËùÓĞÕÛµş£©
+" å¸¸è§„æ¨¡å¼ä¸‹ç”¨ç©ºæ ¼é”®æ¥å¼€å…³å…‰æ ‡è¡Œæ‰€åœ¨æŠ˜å ï¼ˆæ³¨ï¼šzR å±•å¼€æ‰€æœ‰æŠ˜å ï¼ŒzM å…³é—­æ‰€æœ‰æŠ˜å ï¼‰
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
  
-" µ±ÎÄ¼şÔÚÍâ²¿±»ĞŞ¸Ä£¬×Ô¶¯¸üĞÂ¸ÃÎÄ¼ş
+" å½“æ–‡ä»¶åœ¨å¤–éƒ¨è¢«ä¿®æ”¹ï¼Œè‡ªåŠ¨æ›´æ–°è¯¥æ–‡ä»¶
 set autoread
  
-" ³£¹æÄ£Ê½ÏÂÊäÈë cS Çå³ıĞĞÎ²¿Õ¸ñ
+" å¸¸è§„æ¨¡å¼ä¸‹è¾“å…¥ cS æ¸…é™¤è¡Œå°¾ç©ºæ ¼
 nmap cS :%s/\s\+$//g<CR>:noh<CR>
  
-" ³£¹æÄ£Ê½ÏÂÊäÈë cM Çå³ıĞĞÎ² ^M ·ûºÅ
+" å¸¸è§„æ¨¡å¼ä¸‹è¾“å…¥ cM æ¸…é™¤è¡Œå°¾ ^M ç¬¦å·
 nmap cM :%s/\r$//g<CR>:noh<CR>
  
-set ignorecase                                        "ËÑË÷Ä£Ê½ÀïºöÂÔ´óĞ¡Ğ´
-set smartcase                                         "Èç¹ûËÑË÷Ä£Ê½°üº¬´óĞ´×Ö·û£¬²»Ê¹ÓÃ 'ignorecase' Ñ¡Ïî£¬Ö»ÓĞÔÚÊäÈëËÑË÷Ä£Ê½²¢ÇÒ´ò¿ª 'ignorecase' Ñ¡ÏîÊ±²Å»áÊ¹ÓÃ
-" set noincsearch                                       "ÔÚÊäÈëÒªËÑË÷µÄÎÄ×ÖÊ±£¬È¡ÏûÊµÊ±Æ¥Åä
+set ignorecase                                        "æœç´¢æ¨¡å¼é‡Œå¿½ç•¥å¤§å°å†™
+set smartcase                                         "å¦‚æœæœç´¢æ¨¡å¼åŒ…å«å¤§å†™å­—ç¬¦ï¼Œä¸ä½¿ç”¨ 'ignorecase' é€‰é¡¹ï¼Œåªæœ‰åœ¨è¾“å…¥æœç´¢æ¨¡å¼å¹¶ä¸”æ‰“å¼€ 'ignorecase' é€‰é¡¹æ—¶æ‰ä¼šä½¿ç”¨
+" set noincsearch                                       "åœ¨è¾“å…¥è¦æœç´¢çš„æ–‡å­—æ—¶ï¼Œå–æ¶ˆå®æ—¶åŒ¹é…
  
-" Ctrl + K ²åÈëÄ£Ê½ÏÂ¹â±êÏòÉÏÒÆ¶¯
+" Ctrl + K æ’å…¥æ¨¡å¼ä¸‹å…‰æ ‡å‘ä¸Šç§»åŠ¨
 imap <c-k> <Up>
  
-" Ctrl + J ²åÈëÄ£Ê½ÏÂ¹â±êÏòÏÂÒÆ¶¯
+" Ctrl + J æ’å…¥æ¨¡å¼ä¸‹å…‰æ ‡å‘ä¸‹ç§»åŠ¨
 imap <c-j> <Down>
  
-" Ctrl + H ²åÈëÄ£Ê½ÏÂ¹â±êÏò×óÒÆ¶¯ ps : this can make windows console backspace setting fail
+" Ctrl + H æ’å…¥æ¨¡å¼ä¸‹å…‰æ ‡å‘å·¦ç§»åŠ¨ ps : this can make windows console backspace setting fail
 "imap <c-h> <Left>
  
-" Ctrl + L ²åÈëÄ£Ê½ÏÂ¹â±êÏòÓÒÒÆ¶¯
+" Ctrl + L æ’å…¥æ¨¡å¼ä¸‹å…‰æ ‡å‘å³ç§»åŠ¨
 imap <c-l> <Right>
  
-" ÆôÓÃÃ¿ĞĞ³¬¹ı80ÁĞµÄ×Ö·ûÌáÊ¾£¨×ÖÌå±äÀ¶²¢¼ÓÏÂ»®Ïß£©£¬²»ÆôÓÃ¾Í×¢ÊÍµô
+" å¯ç”¨æ¯è¡Œè¶…è¿‡80åˆ—çš„å­—ç¬¦æç¤ºï¼ˆå­—ä½“å˜è“å¹¶åŠ ä¸‹åˆ’çº¿ï¼‰ï¼Œä¸å¯ç”¨å°±æ³¨é‡Šæ‰
 "au BufWinEnter * let w:m2=matchadd('Underlined', '\%>' . 80 . 'v.\+', -1)
 

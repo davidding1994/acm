@@ -1,23 +1,23 @@
 " -----------------------------------------------------------------------------
-"  < ±àÂëÅäÖÃ >
+"  < ç¼–ç é…ç½® >
 " -----------------------------------------------------------------------------
-" ×¢£ºÊ¹ÓÃutf-8¸ñÊ½ºó£¬Èí¼şÓë³ÌĞòÔ´Âë¡¢ÎÄ¼şÂ·¾¶²»ÄÜÓĞÖĞÎÄ£¬·ñÔò±¨´í
+" æ³¨ï¼šä½¿ç”¨utf-8æ ¼å¼åï¼Œè½¯ä»¶ä¸ç¨‹åºæºç ã€æ–‡ä»¶è·¯å¾„ä¸èƒ½æœ‰ä¸­æ–‡ï¼Œå¦åˆ™æŠ¥é”™
 if g:isGUI
-    set encoding=utf-8                                    "ÉèÖÃgvimÄÚ²¿±àÂë£¬Ä¬ÈÏ²»¸ü¸Ä
+    set encoding=utf-8                                    "è®¾ç½®gvimå†…éƒ¨ç¼–ç ï¼Œé»˜è®¤ä¸æ›´æ”¹
 endif
 
-set fileencoding=utf-8                                "ÉèÖÃµ±Ç°ÎÄ¼ş±àÂë£¬¿ÉÒÔ¸ü¸Ä£¬Èç£ºgbk£¨Í¬cp936£©
-set fileencodings=utf-8,ucs-bom,gbk,cp936,latin-1     "ÉèÖÃÖ§³Ö´ò¿ªµÄÎÄ¼şµÄ±àÂë
+set fileencoding=utf-8                                "è®¾ç½®å½“å‰æ–‡ä»¶ç¼–ç ï¼Œå¯ä»¥æ›´æ”¹ï¼Œå¦‚ï¼šgbkï¼ˆåŒcp936ï¼‰
+set fileencodings=utf-8,ucs-bom,gbk,cp936,latin-1     "è®¾ç½®æ”¯æŒæ‰“å¼€çš„æ–‡ä»¶çš„ç¼–ç 
  
-" ÎÄ¼ş¸ñÊ½£¬Ä¬ÈÏ ffs=dos,unix
-set fileformat=unix                                   "ÉèÖÃĞÂ£¨µ±Ç°£©ÎÄ¼şµÄ<EOL>¸ñÊ½£¬¿ÉÒÔ¸ü¸Ä£¬Èç£ºdos£¨windowsÏµÍ³³£ÓÃ£©
-set fileformats=dos,unix,mac                          "¸ø³öÎÄ¼şµÄ<EOL>¸ñÊ½ÀàĞÍ
+" æ–‡ä»¶æ ¼å¼ï¼Œé»˜è®¤ ffs=dos,unix
+set fileformat=unix                                   "è®¾ç½®æ–°ï¼ˆå½“å‰ï¼‰æ–‡ä»¶çš„<EOL>æ ¼å¼ï¼Œå¯ä»¥æ›´æ”¹ï¼Œå¦‚ï¼šdosï¼ˆwindowsç³»ç»Ÿå¸¸ç”¨ï¼‰
+set fileformats=dos,unix,mac                          "ç»™å‡ºæ–‡ä»¶çš„<EOL>æ ¼å¼ç±»å‹
  
 if (g:iswindows && g:isGUI)
-    "½â¾ö²Ëµ¥ÂÒÂë
+    "è§£å†³èœå•ä¹±ç 
     source $VIMRUNTIME/delmenu.vim
     source $VIMRUNTIME/menu.vim
  
-    "½â¾öconsleÊä³öÂÒÂë
+    "è§£å†³consleè¾“å‡ºä¹±ç 
     language messages zh_CN.utf-8
 endif

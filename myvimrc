@@ -1,4 +1,11 @@
-source C:\Code\acm\vimrc\os_teminal_judge.rc
-source C:\Code\acm\vimrc\encoding.rc
-source C:\Code\acm\vimrc\edite.rc
-source C:\Code\acm\vimrc\ui.rc
+if(has("win32") || has("win64") || has("win95") || has("win16"))
+    source C:\Code\acm\vimrc\os_teminal_judge.rc
+    source C:\Code\acm\vimrc\encoding.rc
+    source C:\Code\acm\vimrc\edite.rc
+    source C:\Code\acm\vimrc\ui.rc
+else
+    source ~/Code/acm/vimrc/os_teminal_judge.rc
+    source ~/Code/acm/vimrc/encoding.rc
+    source ~/Code/acm/vimrc/edite.rc
+    source ~/Code/acm/vimrc/ui.rc
+endif
