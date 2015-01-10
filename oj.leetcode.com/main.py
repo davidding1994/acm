@@ -1,4 +1,4 @@
-#python
+#! /usr/bin/env python3
 import sys,os
 main_text = \
 '''#include <bits/stdc++.h>
@@ -15,5 +15,5 @@ with open('leetcode.main.cpp','w') as f:
     f.write(main_text)
 os.system('g++ -g leetcode.main.cpp -o test.exe')
 print('compile success')
-os.system('test.exe')
+os.system('./test.exe')
 

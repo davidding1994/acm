@@ -20,13 +20,19 @@ public:
         return ;
     }
     vector<int> twoSum(vector<int> &numbers, int target) {
+        vector<int> index(numbers);
+        sort(numbers.begin(),numbers.end());
         for(vector<int>::iterator x = numbers.begin(); x != numbers.end(); x ++)
         {
-            vector<int>::iterator y = find(numbers.begin(),numbers.end(), target - *x);
-            if(y != numbers.end())
+            vector<int>::iterator y = lower_bound(numbers.begin(),numbers.end(), target - *x);
+            if(y != numbers.end() && *x + *y == target)
             {
                 vector<int> ret;
-                ret.push_back(x - numbers.begin() + 1),ret.push_back(y - numbers.begin() + 1);
+                vector<int>::iterator it = find(index.begin(),index.end(),*x);
+                ret.push_back(it - index.begin() + 1);
+                it = find((*x == *y ? ++ it: index.begin()),index.end(),*y);
+                ret.push_back(it - index.begin() + 1);
+                sort(ret.begin(),ret.end());
                 return ret;
             }
         }
